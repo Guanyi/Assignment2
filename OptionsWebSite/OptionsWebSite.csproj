@@ -168,8 +168,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApplicationRoleController.cs" />
+    <Compile Include="Controllers\ChoiceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OptionController.cs" />
+    <Compile Include="Controllers\YearTermController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,6 +243,26 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\SelectOption.cshtml" />
+    <Content Include="Views\YearTerm\Create.cshtml" />
+    <Content Include="Views\YearTerm\Delete.cshtml" />
+    <Content Include="Views\YearTerm\Details.cshtml" />
+    <Content Include="Views\YearTerm\Edit.cshtml" />
+    <Content Include="Views\YearTerm\Index.cshtml" />
+    <Content Include="Views\Option\Create.cshtml" />
+    <Content Include="Views\Option\Delete.cshtml" />
+    <Content Include="Views\Option\Details.cshtml" />
+    <Content Include="Views\Option\Edit.cshtml" />
+    <Content Include="Views\Option\Index.cshtml" />
+    <Content Include="Views\Choice\Create.cshtml" />
+    <Content Include="Views\Choice\Delete.cshtml" />
+    <Content Include="Views\Choice\Details.cshtml" />
+    <Content Include="Views\Choice\Edit.cshtml" />
+    <Content Include="Views\Choice\Index.cshtml" />
+    <Content Include="Views\ApplicationRole\Create.cshtml" />
+    <Content Include="Views\ApplicationRole\Delete.cshtml" />
+    <Content Include="Views\ApplicationRole\Details.cshtml" />
+    <Content Include="Views\ApplicationRole\Edit.cshtml" />
+    <Content Include="Views\ApplicationRole\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
