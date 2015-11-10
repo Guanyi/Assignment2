@@ -1,0 +1,8 @@
+﻿Enable-Migrations -ContextTypeName OptionsWebSite.Models.ApplicationDbContext -MigrationsDirectory Migration\Identity
+Add-Migration -ConfigurationTypeName OptionsWebSite.Migration.Identity.Configuration "init"
+Update-Database -ConfigurationTypeName OptionsWebSite.Migration.Identity.Configuration
+
+
+Enable-Migrations -ContextTypeName DiplomaDataModel.Models.DataContext -MigrationsDirectory Migration\Record
+Add-Migration -ConfigurationTypeName DiplomaDataModel.Migration.Identity.Configuration "init"
+Update-Database -ConfigurationTypeName DiplomaDataModel.Migration.Identity.Configuration

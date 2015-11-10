@@ -1,0 +1,10 @@
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\DiplomaDataModel.dll
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\DiplomaDataModel.pdb
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.dll
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.pdb
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\DiplomaDataModel.dll.config
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\EntityFramework.dll
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.dll
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\EntityFramework.xml
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.xml
+e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.csprojResolveAssemblyReference.cache

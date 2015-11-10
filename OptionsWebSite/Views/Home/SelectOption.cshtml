@@ -1,0 +1,88 @@
+﻿
+@model DiplomaDataModel.Models.Choice
+
+@{
+    ViewBag.Title = "Option Selection Page";
+}
+
+<div>
+    <h3>BCIT Computing Department Option Selection Form</h3>
+    @if (TempData["success"] != null)
+    {
+        <br />
+    }
+    else
+    {
+        <br />
+    }
+    @using (Html.BeginForm("SelectOption", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken();
+        <div class="form-group">
+            @Html.LabelFor(m => m.StudentId, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9">
+                @Html.TextBoxFor(m => m.StudentId, new { @class = "form-control", Value = (string)ViewBag.CurrentStudentId, @readonly = "readonly" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.StudentFirstName, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9">
+                @Html.TextBoxFor(m => m.StudentFirstName, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.StudentLastName, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9" width>
+                @Html.TextBoxFor(m => m.StudentLastName, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.FirstChoiceOptionId, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9">
+                @Html.DropDownListFor(m => m.FirstChoiceOptionId, ViewBag.OptionList as SelectList, new { @class = "dropdown", Style = "width: 300px" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.SecondChoiceOptionId, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9">
+                @Html.DropDownListFor(m => m.SecondChoiceOptionId, ViewBag.OptionList as SelectList, new { @class = "dropdown", Style = "width: 300px" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ThirdChoiceOptionId, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9">
+                @Html.DropDownListFor(m => m.ThirdChoiceOptionId, ViewBag.OptionList as SelectList, new { @class = "dropdown", Style = "width: 300px" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.FourthChoiceOptionId, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9">
+                @Html.DropDownListFor(m => m.FourthChoiceOptionId, ViewBag.OptionList as SelectList, new { @class = "dropdown", Style = "width: 300px" })
+            </div>
+        </div>
+
+        <hr />
+        <div style="color: indianred"> @Html.ValidationSummary() </div>
+        <div class="form-group">
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="reset" class="btn btn-default" value="Clear" />
+                    <input type="submit" class="btn btn-default" value="Select" />
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
