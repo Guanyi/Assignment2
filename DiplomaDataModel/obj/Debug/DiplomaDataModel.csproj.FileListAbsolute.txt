@@ -8,3 +8,5 @@ e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\EntityF
 e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\EntityFramework.xml
 e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.xml
 e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.csprojResolveAssemblyReference.cache
+E:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.Migration.Record.initRecords.resources
+E:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.csproj.GenerateResource.Cache

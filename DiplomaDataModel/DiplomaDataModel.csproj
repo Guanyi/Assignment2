@@ -49,6 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migration\Record\201511101213468_initRecords.cs" />
+    <Compile Include="Migration\Record\201511101213468_initRecords.Designer.cs">
+      <DependentUpon>201511101213468_initRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migration\Record\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
     <Compile Include="Models\DataContext.cs" />
     <Compile Include="Models\Option.cs" />
@@ -58,6 +63,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migration\Record\201511101213468_initRecords.resx">
+      <DependentUpon>201511101213468_initRecords.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
