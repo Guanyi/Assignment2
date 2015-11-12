@@ -38,6 +38,7 @@ namespace OptionsWebSite.Controllers
         // GET: YearTerm/Create
         public ActionResult Create()
         {
+            ViewBag.YearTermList = new SelectList(db.YearTerms.GroupBy(yt => yt.Term).Select(y => y.FirstOrDefault()), "YearTermId", "Term");
             return View();
         }
 
