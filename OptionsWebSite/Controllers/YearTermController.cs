@@ -62,6 +62,7 @@ namespace OptionsWebSite.Controllers
         // GET: YearTerm/Edit/5
         public ActionResult Edit(int? id)
         {
+            ViewBag.YearTermList = new SelectList(db.YearTerms.GroupBy(yt => yt.Term).Select(y => y.FirstOrDefault()), "YearTermId", "Term");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
