@@ -34,3 +34,15 @@ E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDat
 E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.csproj.GenerateResource.Cache
 E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.dll
 E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.pdb
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.dll.config
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.dll
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.pdb
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.dll
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.xml
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.csprojResolveAssemblyReference.cache
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.Migration.Record.initRecords.resources
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.csproj.GenerateResource.Cache
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.dll
+C:\Users\Jessica\Documents\School\Fall 2015\COMP4976 - ASP .NET\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.pdb

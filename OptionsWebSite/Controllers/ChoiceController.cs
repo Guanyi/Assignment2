@@ -50,17 +50,9 @@ namespace OptionsWebSite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ChoiceId,StudentId,StudentFirstName,StudentLastName,FirstChoiceOptionId,SecondChoiceOptionId,ThirdChoiceOptionId,FourthChoiceOptionId,SelectionDate,YearTerm")] Choice choice)
         {
-            if (ModelState.IsValid)
-            {
-                //Option option1 = db.Options.Find(choice.FirstChoiceOptionId);
-                //choice.Options.Add(option1);
-                //Option option2 = db.Options.Find(choice.SecondChoiceOptionId);
-                //choice.Options.Add(option2);
-                //Option option3 = db.Options.Find(choice.ThirdChoiceOptionId);
-                //choice.Options.Add(option3);
-                //Option option4 = db.Options.Find(choice.FirstChoiceOptionId);
-                //choice.Options.Add(option4);
 
+            if (ModelState.IsValid)
+            {   
                 db.Choices.Add(choice);
                 db.SaveChanges();
                 return RedirectToAction("Index");

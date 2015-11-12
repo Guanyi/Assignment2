@@ -164,6 +164,15 @@ namespace OptionsWebSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+            if (!model.UserName.StartsWith("A00"))
+            {
+                ModelState.AddModelError("", "Username must begin with A00");
+            }
+            else if (model.UserName.Length < 9)
+            {
+                ModelState.AddModelError("", "Username must be 9 characters");
+            }
+
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.UserName };
