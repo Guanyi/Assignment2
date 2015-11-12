@@ -80,6 +80,20 @@ namespace OptionsWebSite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "YearTermId,Year,Term,IsDefault")] YearTerm yearTerm)
         {
+            bool current = yearTerm.IsDefault;
+
+
+            if (current)
+            {
+                var oldDefault = (db.YearTerms
+                    .Where(s => s.IsDefault == true)).FirstOrDefault();
+                if (oldDefault != null)
+                {
+                    oldDefault.IsDefault = false;
+                }
+
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entry(yearTerm).State = EntityState.Modified;
