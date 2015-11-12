@@ -19,6 +19,8 @@ namespace DiplomaDataModel.Models
         [Required]
         public bool IsDefault { get; set; }
 
+        public string Description { get { return $"{Year}/{Term}"; } }
+
         public List<Choice> Choices { get; set; }
     }
 }

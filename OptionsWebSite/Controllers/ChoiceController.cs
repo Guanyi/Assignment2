@@ -11,23 +11,25 @@ using DiplomaDataModel.Models;
 namespace OptionsWebSite.Controllers
 {
     public class ChoiceController : Controller
-    {
+    {                  
         private DataContext db = new DataContext();
 
         // GET: Choice
         public ActionResult Index()
         {
-            return View(db.Choices.ToList());
+            return View(db.Choices.Include("Option1").Include("Option2").Include("Option3").Include("Option4").Include("YearTerm").ToList());
         }
 
-        // GET: Choice/Details/5
         public ActionResult Details(int? id)
+        // GET: Choice/Details/5
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Choice choice = db.Choices.Find(id);
+            // Choice choice = db.Choices.Find(id);
+
+            Choice choice = db.Choices.Include("Option1").Include("Option2").Include("Option3").Include("Option4").Include("YearTerm").FirstOrDefault(c=>c.ChoiceId==id);
             if (choice == null)
             {
                 return HttpNotFound();
@@ -50,6 +52,15 @@ namespace OptionsWebSite.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Option option1 = db.Options.Find(choice.FirstChoiceOptionId);
+                //choice.Options.Add(option1);
+                //Option option2 = db.Options.Find(choice.SecondChoiceOptionId);
+                //choice.Options.Add(option2);
+                //Option option3 = db.Options.Find(choice.ThirdChoiceOptionId);
+                //choice.Options.Add(option3);
+                //Option option4 = db.Options.Find(choice.FirstChoiceOptionId);
+                //choice.Options.Add(option4);
+
                 db.Choices.Add(choice);
                 db.SaveChanges();
                 return RedirectToAction("Index");

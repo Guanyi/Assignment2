@@ -15,6 +15,6 @@ namespace DiplomaDataModel.Models
         public string Title { get; set; }
         [Required]
         public bool IsActive { get; set; }
-        public List<Choice> Choices { get; set; }
+        //public List<Choice> Choices { get; set; }
     }
 }

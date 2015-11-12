@@ -16,16 +16,23 @@ namespace DiplomaDataModel.Migration.Record
                         StudentFirstName = c.String(nullable: false, maxLength: 40),
                         StudentLastName = c.String(nullable: false, maxLength: 40),
                         FirstChoiceOptionId = c.Int(nullable: false),
-                        SecondChoiceOptionId = c.Int(nullable: false),
-                        ThirdChoiceOptionId = c.Int(nullable: false),
-                        FourthChoiceOptionId = c.Int(nullable: false),
+                        SecondChoiceOptionId = c.Int(),
+                        ThirdChoiceOptionId = c.Int(),
+                        FourthChoiceOptionId = c.Int(),
                         SelectionDate = c.DateTime(nullable: false),
-                        YearTerm = c.Int(nullable: false),
-                        YearTerm_YearTermId = c.Int(),
+                        YearTermId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ChoiceId)
-                .ForeignKey("dbo.YearTerms", t => t.YearTerm_YearTermId)
-                .Index(t => t.YearTerm_YearTermId);
+                .ForeignKey("dbo.Options", t => t.FirstChoiceOptionId, cascadeDelete: true)
+                .ForeignKey("dbo.Options", t => t.SecondChoiceOptionId)
+                .ForeignKey("dbo.Options", t => t.ThirdChoiceOptionId)
+                .ForeignKey("dbo.Options", t => t.FourthChoiceOptionId)
+                .ForeignKey("dbo.YearTerms", t => t.YearTermId, cascadeDelete: true)
+                .Index(t => t.FirstChoiceOptionId)
+                .Index(t => t.SecondChoiceOptionId)
+                .Index(t => t.ThirdChoiceOptionId)
+                .Index(t => t.FourthChoiceOptionId)
+                .Index(t => t.YearTermId);
             
             CreateTable(
                 "dbo.Options",
@@ -48,30 +55,20 @@ namespace DiplomaDataModel.Migration.Record
                     })
                 .PrimaryKey(t => t.YearTermId);
             
-            CreateTable(
-                "dbo.OptionChoices",
-                c => new
-                    {
-                        Option_OptionId = c.Int(nullable: false),
-                        Choice_ChoiceId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.Option_OptionId, t.Choice_ChoiceId })
-                .ForeignKey("dbo.Options", t => t.Option_OptionId, cascadeDelete: true)
-                .ForeignKey("dbo.Choices", t => t.Choice_ChoiceId, cascadeDelete: true)
-                .Index(t => t.Option_OptionId)
-                .Index(t => t.Choice_ChoiceId);
-            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Choices", "YearTerm_YearTermId", "dbo.YearTerms");
-            DropForeignKey("dbo.OptionChoices", "Choice_ChoiceId", "dbo.Choices");
-            DropForeignKey("dbo.OptionChoices", "Option_OptionId", "dbo.Options");
-            DropIndex("dbo.OptionChoices", new[] { "Choice_ChoiceId" });
-            DropIndex("dbo.OptionChoices", new[] { "Option_OptionId" });
-            DropIndex("dbo.Choices", new[] { "YearTerm_YearTermId" });
-            DropTable("dbo.OptionChoices");
+            DropForeignKey("dbo.Choices", "YearTermId", "dbo.YearTerms");
+            DropForeignKey("dbo.Choices", "FourthChoiceOptionId", "dbo.Options");
+            DropForeignKey("dbo.Choices", "ThirdChoiceOptionId", "dbo.Options");
+            DropForeignKey("dbo.Choices", "SecondChoiceOptionId", "dbo.Options");
+            DropForeignKey("dbo.Choices", "FirstChoiceOptionId", "dbo.Options");
+            DropIndex("dbo.Choices", new[] { "YearTermId" });
+            DropIndex("dbo.Choices", new[] { "FourthChoiceOptionId" });
+            DropIndex("dbo.Choices", new[] { "ThirdChoiceOptionId" });
+            DropIndex("dbo.Choices", new[] { "SecondChoiceOptionId" });
+            DropIndex("dbo.Choices", new[] { "FirstChoiceOptionId" });
             DropTable("dbo.YearTerms");
             DropTable("dbo.Options");
             DropTable("dbo.Choices");

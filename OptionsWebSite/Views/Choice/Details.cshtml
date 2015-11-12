@@ -39,7 +39,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FirstChoiceOptionId)
+            @Html.DisplayFor(model => model.Option1.Title)
         </dd>
 
         <dt>
@@ -47,7 +47,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SecondChoiceOptionId)
+            @Html.DisplayFor(model => model.Option2.Title)
         </dd>
 
         <dt>
@@ -55,7 +55,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ThirdChoiceOptionId)
+            @Html.DisplayFor(model => model.Option3.Title)
         </dd>
 
         <dt>
@@ -63,7 +63,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FourthChoiceOptionId)
+            @Html.DisplayFor(model => model.Option4.Title)
         </dd>
 
         <dt>
@@ -75,11 +75,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.YearTerm)
+            @Html.DisplayNameFor(model => model.YearTermId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.YearTerm)
+            @Html.DisplayFor(model => model.YearTerm.Description)
         </dd>
 
     </dl>

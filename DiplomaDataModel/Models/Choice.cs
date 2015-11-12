@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -26,27 +27,45 @@ namespace DiplomaDataModel.Models
         [Display(Name = "Last Name:")]
         public string StudentLastName { get; set; }
 
+        //only the first choice foreign can be [required], if add other required foreign keys in other option choices,
+        //migration will produce error
         [Required]
         [Display(Name = "First Choice:")]
-        public int FirstChoiceOptionId { get; set; }
+        [ForeignKey("Option1")]
+        public int? FirstChoiceOptionId { get; set; }
 
-        [Required]
+        //this object reference is the one will actually produce the foreign key relation to Option table
+        //[Required]
+        [ForeignKey("FirstChoiceOptionId")]
+        public Option Option1 { get; set; }
+
         [Display(Name = "Second Choice:")]
-        public int SecondChoiceOptionId { get; set; }
+        [ForeignKey("Option2")]
+        public int? SecondChoiceOptionId { get; set; }
 
-        [Required]
+        [ForeignKey("SecondChoiceOptionId")]
+        public Option Option2 { get; set; }
+
         [Display(Name = "Third Choice:")]
-        public int ThirdChoiceOptionId { get; set; }
+        [ForeignKey("Option3")]
+        public int? ThirdChoiceOptionId { get; set; }
 
-        [Required]
+        [ForeignKey("ThirdChoiceOptionId")]
+        public Option Option3 { get; set; }
+
         [Display(Name = "Fourth Choice:")]
-        public int FourthChoiceOptionId { get; set; }
+        [ForeignKey("Option4")]
+        public int? FourthChoiceOptionId { get; set; }
+
+        [ForeignKey("FourthChoiceOptionId")]
+        public Option Option4 { get; set; }
 
         [Required]
+        [Display(Name = "Selection Date")]
         public DateTime SelectionDate { get; set; }
 
-        public int YearTerm { get; set; }
-
-        public List<Option> Options { get; set; }
+        [Display(Name = "Year & Term")]
+        public int YearTermId { get; set; }
+        public YearTerm YearTerm { get; set; }
     }
 }

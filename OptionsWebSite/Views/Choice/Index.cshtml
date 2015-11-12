@@ -36,7 +36,7 @@
             @Html.DisplayNameFor(model => model.SelectionDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.YearTerm)
+            @Html.DisplayNameFor(model => model.YearTermId)
         </th>
         <th></th>
     </tr>
@@ -53,22 +53,22 @@
             @Html.DisplayFor(modelItem => item.StudentLastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstChoiceOptionId)
+            @Html.DisplayFor(modelItem => item.Option1.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SecondChoiceOptionId)
+            @Html.DisplayFor(modelItem => item.Option2.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ThirdChoiceOptionId)
+            @Html.DisplayFor(modelItem => item.Option3.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FourthChoiceOptionId)
+            @Html.DisplayFor(modelItem => item.Option4.Title)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SelectionDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.YearTerm)
+            @Html.DisplayFor(modelItem => item.YearTerm.Description)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ChoiceId }) |

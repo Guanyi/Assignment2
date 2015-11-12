@@ -36,10 +36,10 @@ namespace OptionsWebSite.Controllers
         public ActionResult SelectOption(Choice choice)
         {
             //get the only default YearTerm row by BCIT option policy
-            choice.YearTerm = db.YearTerms.SingleOrDefault(y => y.IsDefault == true).YearTermId;
+            choice.YearTermId = db.YearTerms.SingleOrDefault(y => y.IsDefault == true).YearTermId;
 
             //check the input model is valid and duplicate rows with the same StudentId in the StudentOptionChoices is not allowed in the same YearTerm
-            if (ModelState.IsValid && !db.Choices.Any(c => c.StudentId == choice.StudentId && c.YearTerm == choice.YearTerm))
+            if (ModelState.IsValid && !db.Choices.Any(c => c.StudentId == choice.StudentId && c.YearTermId == choice.YearTermId))
             {
                 choice.SelectionDate = DateTime.Now;
                 db.Choices.Add(choice);

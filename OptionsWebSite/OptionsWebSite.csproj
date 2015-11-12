@@ -177,9 +177,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migration\Identity\201511101105006_init.cs" />
-    <Compile Include="Migration\Identity\201511101105006_init.Designer.cs">
-      <DependentUpon>201511101105006_init.cs</DependentUpon>
+    <Compile Include="Migration\Identity\201511120458543_init.cs" />
+    <Compile Include="Migration\Identity\201511120458543_init.Designer.cs">
+      <DependentUpon>201511120458543_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migration\Identity\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -276,15 +276,15 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migration\Identity\201511101105006_init.resx">
-      <DependentUpon>201511101105006_init.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DiplomaDataModel\DiplomaDataModel.csproj">
       <Project>{19770e58-3a06-410d-8a2c-0404ada58b09}</Project>
       <Name>DiplomaDataModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migration\Identity\201511120458543_init.resx">
+      <DependentUpon>201511120458543_init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

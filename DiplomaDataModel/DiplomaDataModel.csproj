@@ -49,9 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migration\Record\201511101213468_initRecords.cs" />
-    <Compile Include="Migration\Record\201511101213468_initRecords.Designer.cs">
-      <DependentUpon>201511101213468_initRecords.cs</DependentUpon>
+    <Compile Include="Migration\Record\201511120427402_initRecords.cs" />
+    <Compile Include="Migration\Record\201511120427402_initRecords.Designer.cs">
+      <DependentUpon>201511120427402_initRecords.cs</DependentUpon>
     </Compile>
     <Compile Include="Migration\Record\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
@@ -65,8 +65,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migration\Record\201511101213468_initRecords.resx">
-      <DependentUpon>201511101213468_initRecords.cs</DependentUpon>
+    <EmbeddedResource Include="Migration\Record\201511120427402_initRecords.resx">
+      <DependentUpon>201511120427402_initRecords.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,3 +10,15 @@ e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\bin\Debug\EntityF
 e:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.csprojResolveAssemblyReference.cache
 E:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.Migration.Record.initRecords.resources
 E:\Visual Studio 2015\Projects\DiplomaOptions\DiplomaDataModel\obj\Debug\DiplomaDataModel.csproj.GenerateResource.Cache
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.dll.config
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.dll
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.pdb
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.dll
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.xml
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.csprojResolveAssemblyReference.cache
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.dll
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.pdb
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.Migration.Record.initRecords.resources
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.csproj.GenerateResource.Cache
