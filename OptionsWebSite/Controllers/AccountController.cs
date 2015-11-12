@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using OptionsWebSite.Models;
+using System.Collections.Generic;
 
 namespace OptionsWebSite.Controllers
 {
@@ -70,9 +71,26 @@ namespace OptionsWebSite.Controllers
                 return View(model);
             }
 
+            //********************
+            //As PasswordSignInAsync() method does not check the LockoutEnabled field in user LoginModel, so has to search user based on
+            //the information user provids during login, which are user name and password.
+            //temporarily use the ApplicationDbContext to get current user list and then dispose the context immediately
+            IEnumerable<ApplicationUser> ApplicationUserList = null;
+            using (var context = new ApplicationDbContext())
+            {
+                ApplicationUserList = context.Users.ToList();
+            }
+            //Search user by name to check the LockoutEnabled
+            var user = ApplicationUserList.Where(u => u.UserName == model.UserName).FirstOrDefault();
+            if (user != null && user.LockoutEnabled)
+                return View("Lockout");
+
+            //********************
+
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
+
             switch (result)
             {
                 case SignInStatus.Success:

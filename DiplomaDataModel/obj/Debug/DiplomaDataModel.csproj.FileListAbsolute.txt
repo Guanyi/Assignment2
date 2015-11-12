@@ -22,3 +22,15 @@ C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataMod
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.pdb
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.Migration.Record.initRecords.resources
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.csproj.GenerateResource.Cache
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.dll.config
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.dll
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\DiplomaDataModel.pdb
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.dll
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.dll
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.xml
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\bin\Debug\EntityFramework.SqlServer.xml
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.csprojResolveAssemblyReference.cache
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.Migration.Record.initRecords.resources
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.csproj.GenerateResource.Cache
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.dll
+E:\Visual Studio 2015\Projects\Assignment2\DiplomaDataModel\obj\Debug\DiplomaDataModel.pdb
