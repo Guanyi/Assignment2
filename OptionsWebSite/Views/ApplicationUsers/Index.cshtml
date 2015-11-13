@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OptionsWebSite.Models.ApplicationUser>
+﻿@model IEnumerable<OptionsWebSite.Controllers.UserIndexViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -9,10 +9,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.UserName)
+            @Html.DisplayNameFor(model => model.User.UserName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LockoutEnabled)
+            @Html.DisplayNameFor(model => model.User.Roles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.LockoutEnabled)
         </th>
         <th></th>
     </tr>
@@ -20,13 +23,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.UserName)
+            @Html.DisplayFor(modelItem => item.User.UserName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.LockoutEnabled)
+            @Html.DisplayFor(modelItem => item.Role.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id })
+            @Html.DisplayFor(modelItem => item.User.LockoutEnabled)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.User.Id })
         </td>
     </tr>
 }

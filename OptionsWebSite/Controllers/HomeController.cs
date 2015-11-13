@@ -15,7 +15,7 @@ namespace OptionsWebSite.Controllers
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles ="Student")]
         public ActionResult SelectOption()
         {
             //from the option table, only select the active options, pass these records with OptionId to be drop down menu value
@@ -30,7 +30,7 @@ namespace OptionsWebSite.Controllers
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Student")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult SelectOption(Choice choice)
